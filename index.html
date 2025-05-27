@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batalha Naval - 2 Jogadores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Batalha Naval</h1>
+        
+        <div class="game-info">
+            <div class="current-player">
+                <h2 id="current-player-text">Vez do Jogador 1</h2>
+                <div class="game-phase" id="game-phase">Fase: Posicionando navios</div>
+            </div>
+            
+            <div class="ship-selector" id="ship-selector">
+                <h3>Posicione seus navios:</h3>
+                <div class="ships">
+                    <button class="ship-btn active" data-size="5" data-count="1">Porta-aviões (5)</button>
+                    <button class="ship-btn" data-size="4" data-count="1">Encouraçado (4)</button>
+                    <button class="ship-btn" data-size="3" data-count="2">Cruzador (3)</button>
+                    <button class="ship-btn" data-size="2" data-count="3">Destroyer (2)</button>
+                    <button class="ship-btn" data-size="1" data-count="4">Submarino (1)</button>
+                </div>
+                <button id="rotate-btn">Rotacionar Navio</button>
+                <button id="finish-placement" disabled>Finalizar Posicionamento</button>
+            </div>
+        </div>
+
+        <div class="game-boards">
+            <div class="player-board">
+                <h3>Jogador 1</h3>
+                <div class="board" id="player1-board"></div>
+                <div class="ships-status" id="player1-ships"></div>
+            </div>
+            
+            <div class="player-board">
+                <h3>Jogador 2</h3>
+                <div class="board" id="player2-board"></div>
+                <div class="ships-status" id="player2-ships"></div>
+            </div>
+        </div>
+
+        <div class="game-controls">
+            <button id="new-game">Novo Jogo</button>
+            <button id="switch-player" style="display: none;">Trocar Jogador</button>
+        </div>
+
+        <div class="game-log" id="game-log"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
